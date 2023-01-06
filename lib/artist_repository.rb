@@ -9,7 +9,7 @@ class ArtistRepository
 
     result_set.each do |record|
       artist = Artist.new
-      artist.id = record['id']
+      artist.id = record['id'].to_i
       artist.name = record['name']
       artist.genre = record['genre']
     
